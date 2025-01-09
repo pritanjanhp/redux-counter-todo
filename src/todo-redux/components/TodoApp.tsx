@@ -4,8 +4,10 @@ import TodoList from "./TodoList";
 const TodoApp = () => {
   return (
     <>
-      <h3>Todo using redux</h3>
-      <AddTodo />
+      <div style={{textAlign:'center'}}>
+        <h2>Todo using redux</h2>
+        <AddTodo />
+      </div>
       <TodoList />
     </>
   );

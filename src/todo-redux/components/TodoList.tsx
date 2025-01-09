@@ -5,9 +5,7 @@ import { useSelector } from "react-redux";
 
 const TodoList: React.FC = () => {
   const { todos } = useSelector((state: RootState) => state.todo);
-
-  console.log(todos);
-
+  // console.log(todos);
   return (
     <>
       <ul

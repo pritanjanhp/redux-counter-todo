@@ -2,10 +2,12 @@
 
 ## Steps
 
-- create store
-- wrap app component under provider in main.jsx (so that the store will be availble to every component)
-- create slice
-- register reducer in store
+- Create a Redux store
+- Wrap the App with Provider in main.jsx (so that the store will be availble to every component)
+- Create a Redux Slice
+- Use the Redux State and Dispatch Actions in Components
+- Update your App Component
+- Run your application now.
 
 ## Installing React with redux-
 
@@ -13,6 +15,10 @@
 - npx create-react-app my-app --template redux-typescript
 
 <hr/>
+<hr/>
+<hr/>
+<hr/>
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

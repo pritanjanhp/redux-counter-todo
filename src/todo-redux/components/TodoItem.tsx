@@ -2,6 +2,9 @@ import { useDispatch } from "react-redux";
 import { editTodo, removeTodo, toggleTodo } from "../features/TodoSlice";
 import styles from "./todoItem.module.css";
 import { useState } from "react";
+import { CiEdit } from "react-icons/ci";
+import { TiTickOutline } from "react-icons/ti";
+import { MdDeleteOutline } from "react-icons/md";
 
 interface item {
   id: number;
@@ -9,11 +12,11 @@ interface item {
   completed: boolean;
 }
 
-const TodoItem: React.FC<item> = ({ id, text }) => {
+const TodoItem: React.FC<item> = ({ id, text, completed }) => {
   const [isEdit, setIsEdit] = useState(false);
   const [newText, setNewText] = useState(text);
-
   const dispatch = useDispatch();
+
   const handleRemove = () => {
     dispatch(removeTodo(id));
   };
@@ -22,11 +25,12 @@ const TodoItem: React.FC<item> = ({ id, text }) => {
   };
 
   const handleEdit = () => {
+    if (completed) return;
     if (isEdit) {
       const updateTodo = {
         id,
         text: newText,
-        completed: true
+        completed
       };
       dispatch(editTodo(updateTodo));
     }
@@ -40,14 +44,15 @@ const TodoItem: React.FC<item> = ({ id, text }) => {
         flexDirection: "row",
         justifyContent: "space-between",
         width: "100%",
-        gap:'10px'
+        gap: "10px"
         // textAlign:'center'
       }}
     >
       {/* <li> */}
+      <input type="checkbox" checked={completed} onChange={handleToggle} />
       <span
         className={styles.text}
-        // style={{ textDecoration: completed ? "line-through" : "none" }}
+        style={{ textDecoration: completed ? "line-through" : "none" }}
         onClick={handleToggle}
       >
         {isEdit ? (
@@ -63,12 +68,26 @@ const TodoItem: React.FC<item> = ({ id, text }) => {
         )}
       </span>
       <div className={styles.btnGap}>
-        <button className={styles.btn} onClick={handleRemove}>
-          Delete
+        <button
+          onClick={handleRemove}
+          style={{
+            backgroundColor: "transparent",
+            fontSize: "25px",
+            border: "none"
+          }}
+        >
+          <MdDeleteOutline />
         </button>
-        <button className={styles.btn} onClick={handleEdit}>
-          {/* Edit */}
-          {isEdit ? "Save" : "Edit"}
+        <button
+          style={{
+            backgroundColor: "transparent",
+            border: "none",
+            fontSize: "25px"
+          }}
+          onClick={handleEdit}
+        >
+          {/* {isEdit ? "Save" : "Edit"} */}
+          {isEdit ? <TiTickOutline /> : <CiEdit />}
         </button>
       </div>
       {/* </li> */}

@@ -32,8 +32,12 @@ const todoSlice = createSlice({
     },
 
     toggleTodo: (state, action: PayloadAction<number>) => {
-      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+      const todo = state.todos.find((todo) => todo.id === action.payload);
+      if (todo) {
+        todo.completed = !todo.completed; 
+      }
     },
+
     editTodo: (state, action: PayloadAction<Todo>) => {
       state.todos = state.todos.map((todo) => {
         if (todo.id === action.payload.id) {

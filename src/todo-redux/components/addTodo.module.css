@@ -1,9 +1,15 @@
 .container {
   gap: 10px;
   flex-direction: row;
-  margin: 10px;
-  padding: 5px;
+  /* margin: 10px; */
+  /* padding: 5px; */
+  display: flex;
+  /* align-items: center; */
+  /* margin-right: -50px; */
+  align-items: center;
+  justify-content: center;
 }
+
 .btn {
   border: none;
   background-color: rgb(144, 190, 196);
@@ -19,12 +25,11 @@
 }
 .input {
   text-align: center;
-  font-size: larger;
+  font-size: 20px;
   border: none;
   background-color: rgb(183, 204, 206);
-  border-radius: 40px;
-
+  border-radius: 30px;
   color: rgb(25, 147, 184);
-  margin: 20px;
-  padding: 5px;
+  /* margin: 20px; */
+  /* padding: 5px;/ */
 }

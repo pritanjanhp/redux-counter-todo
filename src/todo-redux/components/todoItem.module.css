@@ -11,6 +11,7 @@
   /* background-color: red; */
   width: 300px;
   /* padding: 10px;   */
+  margin: 15px;
 }
 
 .btn {
@@ -35,7 +36,7 @@
   border: none;
   border-bottom: 10px;
   text-align: center;
-  font-size: large;
+  /* font-size: large; */
   /* color: rgb(43, 140, 205); */
   background-color: rgb(54, 64, 65);
   border-radius: 10px;
