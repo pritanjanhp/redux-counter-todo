@@ -1,0 +1,30 @@
+.container {
+  gap: 10px;
+  flex-direction: row;
+  margin: 10px;
+  padding: 5px;
+}
+.btn {
+  border: none;
+  background-color: rgb(144, 190, 196);
+  /* color:black; */
+  padding: 10px 20px;
+  border-radius: 40px;
+  color: rgb(43, 140, 205);
+}
+
+.btn:hover {
+  background-color: rgb(43, 140, 205);
+  color: aliceblue;
+}
+.input {
+  text-align: center;
+  font-size: larger;
+  border: none;
+  background-color: rgb(183, 204, 206);
+  border-radius: 40px;
+
+  color: rgb(25, 147, 184);
+  margin: 20px;
+  padding: 5px;
+}
