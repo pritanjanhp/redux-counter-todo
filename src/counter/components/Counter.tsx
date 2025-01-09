@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../app/store";
+import { RootState } from "../../app/store";
 import {
   decrement,
   increment,
@@ -25,19 +25,63 @@ const Counter = () => {
     <>
       <h3>Counter</h3>
       <h2>count : {counter}</h2>
-      <button onClick={handleIncrement}>++</button> <br /> <br />
-      <button onClick={handleDecrement}>--</button> <br /> <br />
-      <button onClick={() => dispatch(reset())}>reset</button> <br />
+      <div>
+        <button
+          style={{
+            border: "none",
+            backgroundColor: "transparent ",
+            fontSize: "25px"
+          }}
+          onClick={handleIncrement}
+        >
+          +
+        </button>{" "}
+        <br /> <br />
+        <button
+          style={{
+            border: "none",
+            backgroundColor: "transparent ",
+            fontSize: "25px"
+          }}
+          onClick={handleDecrement}
+        >
+          -
+        </button>{" "}
+        <br /> <br />
+        <button
+          style={{
+            border: "none",
+            backgroundColor: "transparent ",
+            fontSize: "25px"
+          }}
+          onClick={() => dispatch(reset())}
+        >
+          reset
+        </button>{" "}
+        <br />
+      </div>
       <br />
       <input
-        style={{ textAlign: "center" }}
+        style={{
+          textAlign: "center",
+          border: "none",
+          backgroundColor: "transparent ",
+          fontSize: "15px"
+        }}
         value={amt}
         onChange={(e) => setAmt(parseInt(e.target.value))}
       />
       <br />
       <br />
-      <button onClick={() => dispatch(incrementByAmount(amt))}>
-        incremnt by {amt}
+      <button
+        style={{
+          border: "none",
+          // backgroundColor: "transparent ",
+          fontSize: "15px"
+        }}
+        onClick={() => dispatch(incrementByAmount(amt))}
+      >
+        increment by {amt}
       </button>
     </>
   );
