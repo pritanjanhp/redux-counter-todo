@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { editTodo, removeTodo, toggleTodo } from "../features/TodoSlice";
-import styles from "./TodoItem.module.css";
+import styles from "./todoItem.module.css";
 import { useState } from "react";
 
 interface item {
