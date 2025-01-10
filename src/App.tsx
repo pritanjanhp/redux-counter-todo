@@ -23,5 +23,3 @@ export default App;
 // register reducer in store
 
 // npx create-react-app my-app --template redux-typescript
-
-
