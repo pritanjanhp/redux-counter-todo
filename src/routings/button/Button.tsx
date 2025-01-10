@@ -9,8 +9,14 @@ const Button = () => {
         Counter
       </Link>
       <br />
+
       <Link className={style.btn} to="todo">
         Todo with redux
+      </Link>
+      <br />
+
+      <Link className={style.btn} to="api-Integeration">
+        API Integeration
       </Link>
     </>
   );

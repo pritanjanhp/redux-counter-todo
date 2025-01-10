@@ -1,6 +1,6 @@
 import React from "react";
-import { RootState } from "../../app/store.ts";
-import TodoItem from "./TodoItem";
+import { RootState } from "../../../app/store.ts";
+import TodoItem from "./TodoItem.tsx";
 import { useSelector } from "react-redux";
 
 const TodoList: React.FC = () => {

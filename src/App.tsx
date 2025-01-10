@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Button from "./button/Button.tsx";
-import Counter from "./counter/components/Counter.tsx";
-import TodoList from "./todo-redux/components/TodoApp.tsx";
+import Button from "./routings/button/Button.tsx";
+import Counter from "./componentts/counter/components/Counter.tsx";
+import TodoList from "./componentts/todo-redux/components/TodoApp.tsx";
+import ApiApp from "./componentts/api integeration/components/ApiApp.tsx";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Route path="/" element={<Button />} />
       <Route path="/counter" element={<Counter />} />
       <Route path="/todo" element={<TodoList />}></Route>
+      <Route path="api-Integeration" element={<ApiApp />} />
     </Routes>
   );
 };

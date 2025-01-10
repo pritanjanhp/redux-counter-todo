@@ -1,0 +1,31 @@
+.dataForm {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  border: 2px solid rgb(144, 190, 196);
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.dataForm li:first-child {
+  border: 2px solid rgb(144, 190, 196);
+  text-align: center;
+  padding: 5px;
+  /* margin: 10px; */
+  /* color: white; */
+  color: rgb(43, 140, 205);
+  border-radius: 5px;
+}
+
+.btn {
+  border: none;
+  /* background-color: rgb(144, 190, 196); */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
