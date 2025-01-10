@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos } from "../features/TodoApiSlice";
 import { AppDispatch, RootState } from "../../../app/store";
 import styles from "./apiapp.module.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const ApiApp = () => {
   const dispatch = useDispatch<AppDispatch>();
