@@ -11,7 +11,7 @@ const App = () => {
       <Route path="/" element={<Button />} />
       <Route path="/counter" element={<Counter />} />
       <Route path="/todo" element={<TodoList />}></Route>
-      <Route path="api-Integeration" element={<ApiApp />} />
+      <Route path="/api-Integeration" element={<ApiApp />} />
     </Routes>
   );
 };
